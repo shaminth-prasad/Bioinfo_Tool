@@ -15,12 +15,13 @@ def read_xvg(filename):
     return np.array(x), np.array(y)
 
 # ---------- Step 2: Load RMSF data ----------
-wt_file = r"C:\Users\Shami\OneDrive\Desktop\4th_sem_project\vav2\7msd_vav2_w\charmm-gui-5092896201\gromacs\analysis\rmsf1.xvg"
-mut_file = r"C:\Users\Shami\OneDrive\Desktop\4th_sem_project\vav2\8mds_vav2_m_M@818\charmm-gui-5092896260\gromacs\analysis_c\rmsf1.xvg"
+wt_file = #your input wildtype rmsf file path here in double codes, e.g. "C:User/myname/Ondrive/Desktop/project/folder/gromacs/analysis/rmsf.xvg"
+mut_file = #your input mutanttype rmsf file path here in double codes, e.g. "C:User/myname/Ondrive/Desktop/project/folder/gromacs/analysis/rmsf.xvg"
 x_wt, wt_rmsf = read_xvg(wt_file)
 x_mut, mut_rmsf = read_xvg(mut_file)
 
 # ---------- Step 3: Domain Regions ----------
+#here, where you are going to add the domain name of your protein in the format of (domain starting position, domain ending position, 'Colour of choice', 'Domain name')
 domains = [
     (1, 20, 'red', 'CH'),
     (198, 376, 'gray', 'DH'),
@@ -32,9 +33,12 @@ domains = [
 ]
 
 # ---------- Step 4: Plot Setup ----------
+#here you are choosing the length  and the width of your plot for best view (figsize=(14,10)or(14,8),etc)
 fig, ax = plt.subplots(figsize=(14, 6))
 
 # Plot RMSF lines
+# Plot lines colour can be changed here
+
 ax.plot(x_wt, wt_rmsf, label='Wild Type', color='blue')
 ax.plot(x_mut, mut_rmsf, label='Mutant', color='red')
 
