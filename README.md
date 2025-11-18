@@ -1,2 +1,2 @@
 # Bioinfo_Tool
-simlpe tools for bioinformatics
+Simple tools used in bioinformatics
